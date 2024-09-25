@@ -1,4 +1,93 @@
+@use "./classes.scss";    /* connection to the external files */
+@use "./variables.scss";
+
 @font-face {
     font-family: "Urbanist VarFont";
     src: url("../fonts/Urbanist-VariableFont_wght.ttf");
 }
+
+
+
+
+
+/* ******** HEADER SECTION ******* */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 8px;
+    font-family: variables.$fontfam;  /* using variable from variable file */
+}
+
+nav{
+    a{
+        text-decoration: none;
+        color: black;
+        padding:0 8px 0 24px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+        /* ******** HERO SECTION*******  */
+
+.hero-section{
+    font-family: variables.$fontfam;
+    background-image: url(../img/Ilustration_Header\ 1.png);
+    background-repeat: no-repeat;
+
+h1{
+    
+    font-size: 6rem;
+    font-weight: 800;
+    padding: 15%;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a{  display: flex;   /* referring to a-tags in nav of hero-section */
+       /*  justify-content: space-evenly; */  /* why don't u work? */
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 30px;
+        padding: 3px 5rem;
+        &:nth-of-type(3){    /* referring to the 3rd a tag, adding the style of a class from classes file */
+            @extend .green-btn;
+        }
+    }
+}
+   
+}
+
+      /* ******* AD CARD SECTION ********* */
+
+.van-ad-section{
+    font-family: variables.$fontfam;
+   
+    article{
+        margin: 0 auto;
+    }
+
+    div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .ad-card{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 30px;
+       /*  filter: drop-shadow(5px 5px 15px); */
+       box-shadow: 10px 5px 5px grey;
+        
+    }
+}        

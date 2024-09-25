@@ -1,6 +1,78 @@
+.green-btn, .hero-section nav a:nth-of-type(3) {
+  background-color: #B2D0AF;
+  color: #FFFFFF;
+}
+
+/* connection to the external files */
 @font-face {
   font-family: "Urbanist VarFont";
   src: url("../fonts/Urbanist-VariableFont_wght.ttf");
+}
+/* ******** HEADER SECTION ******* */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 8px;
+  font-family: "Urbanist VarFont"; /* using variable from variable file */
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 0 8px 0 24px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ******** HERO SECTION*******  */
+.hero-section {
+  font-family: "Urbanist VarFont";
+  background-image: url(../img/Ilustration_Header\ 1.png);
+  background-repeat: no-repeat;
+}
+.hero-section h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  padding: 15%;
+}
+.hero-section nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section nav a {
+  display: flex; /* referring to a-tags in nav of hero-section */
+  /*  justify-content: space-evenly; */ /* why don't u work? */
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 3px 5rem;
+}
+.hero-section nav a:nth-of-type(3) { /* referring to the 3rd a tag, adding the style of a class from classes file */ }
+
+/* ******* AD CARD SECTION ********* */
+.van-ad-section {
+  font-family: "Urbanist VarFont";
+}
+.van-ad-section article {
+  margin: 0 auto;
+}
+.van-ad-section div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.van-ad-section .ad-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 30px;
+  /*  filter: drop-shadow(5px 5px 15px); */
+  box-shadow: 10px 5px 5px grey;
 }
 
 /*# sourceMappingURL=styles.css.map */
