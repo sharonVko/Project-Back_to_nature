@@ -20,6 +20,7 @@ header{
     border-radius: 30px;
     padding: 8px;
     font-family: variables.$fontfam;  /* using variable from variable file */
+    margin-bottom: 2%;
 }
 
 nav{
@@ -41,13 +42,16 @@ nav{
     background-image: url(../img/Ilustration_Header\ 1.png);
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: contain;
+    /* background-size: contain; */
+    background-size: cover;
+    padding: 5% 0 6% 0;
+
 
 h1{
     width: 28%;
     font-size: 6rem;
     font-weight: 800;
-    padding: 15% 15% 0 15%;
+    padding: 10% 15% 0 15%;
 }
 
 nav{
@@ -56,12 +60,12 @@ nav{
     align-items: center;
     gap: 2%;
 
-    a{  display: flex;   /* referring to a-tags in nav of hero-section */
-        justify-content: space-between;  /* why don't u work? */
+    a{ /*  display: flex; */   /* referring to a-tags in nav of hero-section */
+       /*  justify-content: space-between;  
         align-items: center;
         border: 2px solid black;
         border-radius: 30px;
-        padding: 3px 1rem;
+        padding: 3px 1rem; */
 
         @extend .white-btn;
 
@@ -82,6 +86,10 @@ nav{
         margin: 5% auto;
         text-align: center;
         width: 45%;
+
+        h2{
+            font-size: 2.6rem;
+        }
     }
 
     div{
@@ -90,16 +98,68 @@ nav{
         align-items: center;
         gap: 2%;
     }
-
+ 
+        /* ******* ad-card 1 - 5  styling ******** */
     .ad-card{
         display: flex;
         flex-direction: column;
         border: 1px solid black;
         border-radius: 30px;
-       /*  filter: drop-shadow(5px 5px 15px); */
-       box-shadow: 0px 4px 4px 0 rgba(128, 128, 128, 0.493);
-       width: 20vw;
-       height: 50vh;
+        box-shadow: 0px 4px 4px 0 rgba(128, 128, 128, 0.493);
+        width: 20vw;
+        height: 50vh;
+        text-align: center
         
     }
-}        
+}       
+
+    /* ****** CAMPER SEARCH */
+
+.camper-search-btn{
+    @extend .green-btn;
+    margin:7%  auto;
+  
+}
+
+        /*  ********** CHOICE SECTION ******** */
+
+.choice-section{
+    article{
+        margin: 5% auto;
+        text-align: center;
+        width: 40%;
+
+        h2{
+            font-size: 2.6rem;
+        }
+    }
+
+}
+
+.card-3-pack{
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.option-card{
+    border: 1px solid black;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0 rgba(128, 128, 128, 0.493);
+    width: 30vw;
+    height: 70vh;
+    text-align: center;
+
+    h3{ display: flex;
+        font-size: 2rem;
+
+    span{
+        font-weight: 200;
+    }
+}
+div{
+    background-color: #F0CEA0;
+}
+}
+
+
