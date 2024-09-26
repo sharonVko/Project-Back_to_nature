@@ -86,6 +86,10 @@ nav:hover {
 
 /* ******* AD CARD SECTION ********* */
 .van-ad-section {
+  background-image: url(../img/bg_bulb_green.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*  background-size: cover; */
   font-family: "Urbanist VarFont";
   /* ******* ad-card 1 - 5  styling ******** */
 }
@@ -112,6 +116,7 @@ nav:hover {
   width: 20vw;
   height: 50vh;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.315);
 }
 
 /* ****** CAMPER SEARCH */
@@ -120,6 +125,12 @@ nav:hover {
 }
 
 /*  ********** CHOICE SECTION ******** */
+.choice-section {
+  font-family: "Urbanist VarFont";
+  background-image: url(../img/bg_bulb_blue.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .choice-section article {
   margin: 5% auto;
   text-align: center;
