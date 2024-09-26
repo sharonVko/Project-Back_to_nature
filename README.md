@@ -2,4 +2,4 @@
 
 a little preview...
 
-! [screenshot](./assets/img/hero-screen-back2nature.png)
+![screenshot](./assets/img/hero-screen-back2nature.png)
