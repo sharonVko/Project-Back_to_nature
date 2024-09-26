@@ -1,6 +1,17 @@
 .green-btn, .hero-section nav a:nth-of-type(3) {
-  background-color: #B2D0AF;
+  background-color: #A9CBA6;
   color: #FFFFFF;
+  border-radius: 30px;
+  border: 1px solid #000;
+  box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+  width: 20%;
+}
+
+.white-btn, .hero-section nav a {
+  background-color: #FFFFFF;
+  color: #000;
+  box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+  width: 20%;
 }
 
 /* connection to the external files */
@@ -24,8 +35,9 @@ nav a {
   color: black;
   padding: 0 8px 0 24px;
 }
-nav a:hover {
-  text-decoration: underline;
+nav:hover {
+  text-decoration: underline; /* why don't u work? */
+  font-weight: 800;
 }
 
 /* ******** HERO SECTION*******  */
@@ -33,24 +45,28 @@ nav a:hover {
   font-family: "Urbanist VarFont";
   background-image: url(../img/Ilustration_Header\ 1.png);
   background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
 }
 .hero-section h1 {
+  width: 28%;
   font-size: 6rem;
   font-weight: 800;
-  padding: 15%;
+  padding: 15% 15% 0 15%;
 }
 .hero-section nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2%;
 }
 .hero-section nav a {
   display: flex; /* referring to a-tags in nav of hero-section */
-  /*  justify-content: space-evenly; */ /* why don't u work? */
+  justify-content: space-between; /* why don't u work? */
   align-items: center;
   border: 2px solid black;
   border-radius: 30px;
-  padding: 3px 5rem;
+  padding: 3px 1rem;
 }
 .hero-section nav a:nth-of-type(3) { /* referring to the 3rd a tag, adding the style of a class from classes file */ }
 
@@ -59,12 +75,15 @@ nav a:hover {
   font-family: "Urbanist VarFont";
 }
 .van-ad-section article {
-  margin: 0 auto;
+  margin: 5% auto;
+  text-align: center;
+  width: 45%;
 }
 .van-ad-section div {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 2%;
 }
 .van-ad-section .ad-card {
   display: flex;
@@ -72,7 +91,9 @@ nav a:hover {
   border: 1px solid black;
   border-radius: 30px;
   /*  filter: drop-shadow(5px 5px 15px); */
-  box-shadow: 10px 5px 5px grey;
+  box-shadow: 0px 4px 4px 0 rgba(128, 128, 128, 0.493);
+  width: 20vw;
+  height: 50vh;
 }
 
 /*# sourceMappingURL=styles.css.map */

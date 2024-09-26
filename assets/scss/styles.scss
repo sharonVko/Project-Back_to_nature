@@ -28,8 +28,9 @@ nav{
         color: black;
         padding:0 8px 0 24px;
     }
-    a:hover{
-        text-decoration: underline;
+    &:hover{
+        text-decoration: underline;  /* why don't u work? */
+        font-weight: 800;
     }
 }
 
@@ -39,25 +40,31 @@ nav{
     font-family: variables.$fontfam;
     background-image: url(../img/Ilustration_Header\ 1.png);
     background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
 
 h1{
-    
+    width: 28%;
     font-size: 6rem;
     font-weight: 800;
-    padding: 15%;
+    padding: 15% 15% 0 15%;
 }
 
 nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2%;
 
     a{  display: flex;   /* referring to a-tags in nav of hero-section */
-       /*  justify-content: space-evenly; */  /* why don't u work? */
+        justify-content: space-between;  /* why don't u work? */
         align-items: center;
         border: 2px solid black;
         border-radius: 30px;
-        padding: 3px 5rem;
+        padding: 3px 1rem;
+
+        @extend .white-btn;
+
         &:nth-of-type(3){    /* referring to the 3rd a tag, adding the style of a class from classes file */
             @extend .green-btn;
         }
@@ -72,13 +79,16 @@ nav{
     font-family: variables.$fontfam;
    
     article{
-        margin: 0 auto;
+        margin: 5% auto;
+        text-align: center;
+        width: 45%;
     }
 
     div{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        gap: 2%;
     }
 
     .ad-card{
@@ -87,7 +97,9 @@ nav{
         border: 1px solid black;
         border-radius: 30px;
        /*  filter: drop-shadow(5px 5px 15px); */
-       box-shadow: 10px 5px 5px grey;
+       box-shadow: 0px 4px 4px 0 rgba(128, 128, 128, 0.493);
+       width: 20vw;
+       height: 50vh;
         
     }
 }        
