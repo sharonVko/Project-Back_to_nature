@@ -61,7 +61,7 @@ nav:hover {
   background-position: top center;
   /* background-size: contain; */
   background-size: cover;
-  padding: 5% 0 6% 0;
+  padding: 5% 0 9% 0;
 }
 .hero-section h1 {
   width: 28%;
@@ -75,28 +75,32 @@ nav:hover {
   align-items: center;
   gap: 2%;
 }
-.hero-section nav a { /*  display: flex; */ /* referring to a-tags in nav of hero-section */
+.hero-section nav a {
+  /*  display: flex; */ /* referring to a-tags in nav of hero-section */
   /*  justify-content: space-between;  
-   align-items: center;
-   border: 2px solid black;
-   border-radius: 30px;
-   padding: 3px 1rem; */
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 3px 1rem; */
 }
-.hero-section nav a:nth-of-type(3) { /* referring to the 3rd a tag, adding the style of a class from classes file */ }
+.hero-section nav a:nth-of-type(3) {
+  /* referring to the 3rd a tag, adding the style of a class from classes file */
+}
 
 /* ******* AD CARD SECTION ********* */
 .van-ad-section {
   background-image: url(../img/bg_bulb_green.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  /*  background-size: cover; */
+  /* background-size: cover; */
+  padding-bottom: 3%;
   font-family: "Urbanist VarFont";
   /* ******* ad-card 1 - 5  styling ******** */
 }
 .van-ad-section article {
   margin: 5% auto;
   text-align: center;
-  width: 45%;
+  width: 40%;
 }
 .van-ad-section article h2 {
   font-size: 2.6rem;
@@ -105,22 +109,32 @@ nav:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 2%;
+  gap: 1%;
+  padding: 0 1vw 0 1vw;
 }
 .van-ad-section .ad-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   border: 1px solid black;
   border-radius: 30px;
   box-shadow: 0px 4px 4px 0 rgba(128, 128, 128, 0.493);
-  width: 20vw;
-  height: 50vh;
+  /* width: 20vw;
+  height: 30vh; */
+  width: 17vw;
+  height: 28vh;
+  padding-bottom: 4px;
   text-align: center;
+  background-color: #ffffff;
+  /* only card 1 with opacity */
+}
+.van-ad-section .ad-card:nth-of-type(1) {
   background-color: rgba(255, 255, 255, 0.315);
 }
 
 /* ****** CAMPER SEARCH */
 .camper-search-btn {
+  /* need to talk about this variable thing */
   margin: 7% auto;
 }
 
@@ -129,10 +143,14 @@ nav:hover {
   font-family: "Urbanist VarFont";
   background-image: url(../img/bg_bulb_blue.svg);
   background-repeat: no-repeat;
+  /*  background-size: cover; */
   background-size: contain;
+  background-position: top center;
+  padding: 2% 5% 2%;
+  border-bottom: 1px solid black;
 }
 .choice-section article {
-  margin: 5% auto;
+  margin: 1% auto;
   text-align: center;
   width: 40%;
 }
@@ -143,26 +161,122 @@ nav:hover {
 .card-3-pack {
   display: flex;
   justify-content: center;
-  gap: 2%;
+  gap: 3%;
+  /* width: 60%; */
+  padding: 2% 4%;
 }
 
+/* ***** OPTION CARD BODY x 3 *******  */
+/* card height is a mess... what is wrong?! */
 .option-card {
+  background-color: #f0cea0; /* bg-color for card body, upper img gets bg white property later on */
   border: 1px solid black;
   border-radius: 30px;
   box-shadow: 0px 4px 4px 0 rgba(128, 128, 128, 0.493);
-  width: 30vw;
-  height: 70vh;
+  width: 30vw; /* 30% ? */
   text-align: center;
 }
-.option-card h3 {
+.option-card div {
+  /* first div in card */
+  padding: 5px 1.12rem;
+  border-radius: 0 0 30px 30px;
+}
+.option-card div div:nth-of-type(1) {
+  display: flex; /* div with h3 */
+  justify-content: space-between;
+}
+.option-card div div {
+  /* each tiny div with img */
   display: flex;
+  margin-bottom: 5px;
+  padding: 0;
+  gap: 1.2rem;
+}
+.option-card h3 {
   font-size: 2rem;
+  margin: 0;
 }
 .option-card h3 span {
-  font-weight: 200;
+  font-weight: 600;
+  font-size: 1rem;
 }
-.option-card div {
-  background-color: #F0CEA0;
+.option-card > img {
+  /*with > referring  upper pic of card */
+  background-color: white;
+  width: 100%;
+  border-radius: 30px 30px 0 0; /* to fit card div radius */
+  border-bottom: 2px solid grey;
+}
+.option-card .button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*  button:nth-of-type(1) { */
+  /*  @extend .white-btn; */
+  /* font-family: variables.$fontfam;
+
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px 1rem; */
+  /*  } */
+  /*  button:nth-of-type(2) {
+    @extend .green-btn;
+  } */
+}
+.option-card .button-wrapper .card-btn {
+  font-family: "Urbanist VarFont";
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #000;
+  box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+  width: 90%;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 20px 1rem;
+}
+.option-card .button-wrapper .card-btn:nth-of-type(2) {
+  background-color: #a9cba6;
+  color: #ffffff;
+}
+
+/************** FOOTER **************  */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+footer div {
+  margin-bottom: 1rem;
+}
+footer nav {
+  margin-bottom: 1rem;
+}
+footer nav a {
+  font-size: 12px;
+}
+footer nav a:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}
+footer nav:nth-of-type(2) {
+  /* width? */
+}
+footer nav:nth-of-type(2) a {
+  font-size: 10px;
+  padding: 0;
+}
+footer nav:nth-of-type(2) a:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.footer-social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1.2%;
 }
 
 /*# sourceMappingURL=styles.css.map */

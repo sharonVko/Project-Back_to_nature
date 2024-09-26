@@ -1,177 +1,285 @@
-@use "./classes.scss";    /* connection to the external files */
+@use "./classes.scss"; /* connection to the external files */
 @use "./variables.scss";
 
 @font-face {
-    font-family: "Urbanist VarFont";
-    src: url("../fonts/Urbanist-VariableFont_wght.ttf");
+  font-family: "Urbanist VarFont";
+  src: url("../fonts/Urbanist-VariableFont_wght.ttf");
 }
-
-
-
-
 
 /* ******** HEADER SECTION ******* */
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 30px;
-    padding: 8px;
-    font-family: variables.$fontfam;  /* using variable from variable file */
-    margin-bottom: 2%;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 8px;
+  font-family: variables.$fontfam; /* using variable from variable file */
+  margin-bottom: 2%;
 }
 
-nav{
-    a{
-        text-decoration: none;
-        color: black;
-        padding:0 8px 0 24px;
-    }
-    &:hover{
-        text-decoration: underline;  /* why don't u work? */
-        font-weight: 800;
-    }
+nav {
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 0 8px 0 24px;
+  }
+  &:hover {
+    text-decoration: underline; /* why don't u work? */
+    font-weight: 800;
+  }
 }
 
-        /* ******** HERO SECTION*******  */
+/* ******** HERO SECTION*******  */
 
-.hero-section{
-    font-family: variables.$fontfam;
-    background-image: url(../img/Ilustration_Header\ 1.png);
-    background-repeat: no-repeat;
-    background-position: top center;
-    /* background-size: contain; */
-    background-size: cover;
-    padding: 5% 0 6% 0;
+.hero-section {
+  font-family: variables.$fontfam;
+  background-image: url(../img/Ilustration_Header\ 1.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  /* background-size: contain; */
+  background-size: cover;
+  padding: 5% 0 9% 0;
 
-
-h1{
+  h1 {
     width: 28%;
     font-size: 6rem;
     font-weight: 800;
     padding: 10% 15% 0 15%;
-}
+  }
 
-nav{
+  nav {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2%;
 
-    a{ /*  display: flex; */   /* referring to a-tags in nav of hero-section */
-       /*  justify-content: space-between;  
+    a {
+      /*  display: flex; */ /* referring to a-tags in nav of hero-section */
+      /*  justify-content: space-between;  
         align-items: center;
         border: 2px solid black;
         border-radius: 30px;
         padding: 3px 1rem; */
 
-        @extend .white-btn;
+      @extend .white-btn;
 
-        &:nth-of-type(3){    /* referring to the 3rd a tag, adding the style of a class from classes file */
-            @extend .green-btn;
-        }
+      &:nth-of-type(3) {
+        /* referring to the 3rd a tag, adding the style of a class from classes file */
+        @extend .green-btn;
+      }
     }
-}
-   
-}
-
-      /* ******* AD CARD SECTION ********* */
-
-.van-ad-section{
-
-    background-image: url(../img/bg_bulb_green.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-   /*  background-size: cover; */
-
-    font-family: variables.$fontfam;
-   
-    article{
-        margin: 5% auto;
-        text-align: center;
-        width: 45%;
-
-        h2{
-            font-size: 2.6rem;
-        }
-    }
-
-    div{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 2%;
-    }
- 
-        /* ******* ad-card 1 - 5  styling ******** */
-    .ad-card{
-        display: flex;
-        flex-direction: column;
-        border: 1px solid black;
-        border-radius: 30px;
-        box-shadow: 0px 4px 4px 0 rgba(128, 128, 128, 0.493);
-        width: 20vw;
-        height: 50vh;
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.315);
-
-        
-    }
-}       
-
-    /* ****** CAMPER SEARCH */
-
-.camper-search-btn{
-    @extend .green-btn;
-    margin:7%  auto;
-  
+  }
 }
 
-        /*  ********** CHOICE SECTION ******** */
+/* ******* AD CARD SECTION ********* */
 
-.choice-section{
-    font-family: variables.$fontfam;
-    background-image: url(../img/bg_bulb_blue.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    article{
+.van-ad-section {
+  background-image: url(../img/bg_bulb_green.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* background-size: cover; */
+  padding-bottom: 3%;
+
+  font-family: variables.$fontfam;
+
+  article {
     margin: 5% auto;
     text-align: center;
     width: 40%;
 
-        h2{
-            font-size: 2.6rem;
-        }
+    h2 {
+      font-size: 2.6rem;
     }
+  }
 
-}
-
-.card-3-pack{
+  div {
     display: flex;
-    justify-content: center;
-    gap: 2%;
-}
+    justify-content: space-around;
+    align-items: center;
+    gap: 1%;
+    padding: 0 1vw 0 1vw;
+  }
 
-.option-card{
+  /* ******* ad-card 1 - 5  styling ******** */
+  .ad-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid black;
     border-radius: 30px;
     box-shadow: 0px 4px 4px 0 rgba(128, 128, 128, 0.493);
-    width: 30vw;
-    height: 70vh;
+    /* width: 20vw;
+    height: 30vh; */
+    width: 17vw;
+    height: 28vh;
+    padding-bottom: 4px;
     text-align: center;
+    background-color: #ffffff;
 
-    h3{ display: flex;
-        font-size: 2rem;
+    &:nth-of-type(1) {
+      background-color: rgba(255, 255, 255, 0.315);
+    } /* only card 1 with opacity */
+  }
+}
 
-    span{
-        font-weight: 200;
+/* ****** CAMPER SEARCH */
+
+.camper-search-btn {
+  @extend .green-btn; /* need to talk about this variable thing */
+  margin: 7% auto;
+}
+
+/*  ********** CHOICE SECTION ******** */
+
+.choice-section {
+  font-family: variables.$fontfam;
+  background-image: url(../img/bg_bulb_blue.svg);
+  background-repeat: no-repeat;
+  /*  background-size: cover; */
+  background-size: contain;
+  background-position: top center;
+  padding: 2% 5% 2%;
+  border-bottom: 1px solid black;
+
+  article {
+    margin: 1% auto;
+    text-align: center;
+    width: 40%;
+
+    h2 {
+      font-size: 2.6rem;
     }
-}
-div{
-    background-color: #F0CEA0;
-}
+  }
 }
 
+.card-3-pack {
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+  /* width: 60%; */
+  padding: 2% 4%;
+}
 
+/* ***** OPTION CARD BODY x 3 *******  */
+
+/* card height is a mess... what is wrong?! */
+.option-card {
+  background-color: #f0cea0; /* bg-color for card body, upper img gets bg white property later on */
+  border: 1px solid black;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px 0 rgba(128, 128, 128, 0.493);
+  width: 30vw; /* 30% ? */
+  text-align: center;
+
+  div {
+    /* first div in card */
+    padding: 5px 1.12rem;
+    border-radius: 0 0 30px 30px;
+
+    div:nth-of-type(1) {
+      display: flex; /* div with h3 */
+      justify-content: space-between;
+    }
+    div {
+      /* each tiny div with img */
+      display: flex;
+      margin-bottom: 5px;
+      padding: 0;
+      gap: 1.2rem;
+    }
+  }
+  h3 {
+    font-size: 2rem;
+    margin: 0;
+
+    span {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+  }
+
+  > img {
+    /*with > referring  upper pic of card */
+    background-color: white;
+    width: 100%;
+    border-radius: 30px 30px 0 0; /* to fit card div radius */
+    border-bottom: 2px solid grey;
+  }
+
+  .button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*  button:nth-of-type(1) { */
+    /*  @extend .white-btn; */
+    /* font-family: variables.$fontfam;
+
+      background-color: #ffffff;
+      color: #000;
+      box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+      width: 80%;
+      border: 2px solid black;
+      border-radius: 30px;
+      padding: 20px 1rem; */
+    /*  } */
+    /*  button:nth-of-type(2) {
+      @extend .green-btn;
+    } */
+
+    .card-btn {
+      font-family: variables.$fontfam;
+      font-weight: 600;
+      background-color: #ffffff;
+      color: #000;
+      box-shadow: -4px -4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+      width: 90%;
+      border: 2px solid black;
+      border-radius: 30px;
+      padding: 20px 1rem;
+    }
+    .card-btn:nth-of-type(2) {
+      background-color: #a9cba6;
+      color: #ffffff;
+    }
+  }
+}
+
+/************** FOOTER **************  */
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+
+  div {
+    margin-bottom: 1rem;
+  }
+  nav {
+    margin-bottom: 1rem;
+    a {
+      font-size: 12px;
+      &:hover {
+        text-decoration: underline;
+        font-weight: 500;
+      }
+    }
+  }
+  nav:nth-of-type(2) {
+    /* width? */
+    a {
+      font-size: 10px;
+      padding: 0;
+      &:hover {
+        text-decoration: underline;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.footer-social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1.2%;
+}
